@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tasneem Shaik| Portfolio</title>
+  <meta name="description" content="Personal portfolio of Your Name" />
+
+  <!-- Bootstrap (fastest way to match the referenced layout) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top nav-glass">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">PortFolio</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero-section">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <h1 class="display-5 fw-bold hero-title">I am <span class="accent">YOUR NAME</span></h1>
+          <p class="hero-sub mt-3">
+            Fresher | Aspiring Full Stack Developer
+          </p>
+
+          <div class="d-flex flex-wrap gap-2 mt-4">
+            <a class="btn btn-accent" href="#about">View Profile</a>
+            <a class="btn btn-outline-light" href="#contact">Get in Touch</a>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="hero-card">
+            <img class="profile-img" src="assets/img/profile.jpg" alt="Profile photo" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PROFILE + SKILLS + ABOUT -->
+  <section id="about" class="py-5 section-pad">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- LEFT: PROFILE + SKILLS -->
+        <div class="col-lg-6">
+          <div class="card card-glass h-100">
+            <div class="card-body p-4">
+
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <div class="avatar-wrap">
+                  <img class="avatar" src="assets/img/profile.jpg" alt="Profile photo" />
+                </div>
+                <div>
+                  <h3 class="mb-1">Your Name</h3>
+                  <p class="mb-0 text-muted">Profile: Full stack developer</p>
+                </div>
+              </div>
+
+              <div class="info-grid">
+                <div class="info-row">
+                  <span class="label">Name:</span>
+                  <span class="value">Your Name</span>
+                </div>
+                <div class="info-row">
+                  <span class="label">Profile:</span>
+                  <span class="value">Fresher Full Stack Developer</span>
+                </div>
+                <div class="info-row">
+                  <span class="label">Email:</span>
+                  <span class="value"><a href="mailto:youremail@example.com">youremail@example.com</a></span>
+                </div>
+                <div class="info-row">
+                  <span class="label">Phone:</span>
+                  <span class="value"><a href="tel:+10000000000">+1 000-000-0000</a></span>
+                </div>
+              </div>
+
+              <hr class="hr-soft my-4" />
+
+              <h5 class="mb-3">Skill</h5>
+
+              <!-- Skill bars -->
+              <div class="skill-block">
+                <div class="d-flex justify-content-between">
+                  <span>Java</span><span>70%</span>
+                </div>
+                <div class="progress progress-soft">
+                  <div class="progress-bar" style="width:70%"></div>
+                </div>
+              </div>
+
+              <div class="skill-block">
+                <div class="d-flex justify-content-between">
+                  <span>Frontend</span><span>75%</span>
+                </div>
+                <div class="progress progress-soft">
+                  <div class="progress-bar" style="width:75%"></div>
+                </div>
+              </div>
+
+              <div class="skill-block">
+                <div class="d-flex justify-content-between">
+                  <span>Backend</span><span>70%</span>
+                </div>
+                <div class="progress progress-soft">
+                  <div class="progress-bar" style="width:70%"></div>
+                </div>
+              </div>
+
+              <div class="skill-block mb-0">
+                <div class="d-flex justify-content-between">
+                  <span>Cloud Technologies</span><span>60%</span>
+                </div>
+                <div class="progress progress-soft">
+                  <div class="progress-bar" style="width:60%"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: ABOUT TEXT -->
+        <div class="col-lg-6">
+          <div class="card card-glass h-100">
+            <div class="card-body p-4">
+              <h3 class="mb-3">About me</h3>
+
+              <p class="text-soft">
+                I was trained in full stack development and worked across core phases of the software development lifecycle.
+                I followed structured execution with Agile practices and delivered assignments with strong ownership.
+              </p>
+
+              <p class="text-soft">
+                I built web applications using Java and modern frontend technologies, focusing on clean UI, reliable APIs,
+                and maintainable code. I also improved my debugging, testing, and deployment discipline through hands-on projects.
+              </p>
+
+              <p class="text-soft mb-0">
+                I am actively targeting entry-level roles where I can contribute immediately and scale my impact with the team.
+              </p>
+
+              <div class="mt-4 p-3 callout">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-lightning-charge-fill"></i>
+                  <div>
+                    <div class="fw-semibold">Quick value proposition</div>
+                    <div class="text-soft small">
+                      Strong fundamentals, project-driven learning, and high execution velocity as a fresher.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-5 section-pad section-alt">
+    <div class="container">
+      <div class="row g-4">
+
+        <div class="col-lg-6">
+          <div class="card card-glass h-100">
+            <div class="card-body p-4">
+              <h3 class="mb-3">Get in Touch</h3>
+              <p class="text-soft">
+                Thanks for visiting my portfolio. If you have any opportunities that align with my profile,
+                I am available for a quick discussion. Email is the best channel to reach me.
+              </p>
+
+              <ul class="list-unstyled contact-list mt-4 mb-0">
+                <li><i class="bi bi-geo-alt"></i> Your City, State ZIP</li>
+                <li><i class="bi bi-telephone"></i> <a href="tel:+10000000000">+1 000-000-0000</a></li>
+                <li><i class="bi bi-envelope"></i> <a href="mailto:youremail@example.com">youremail@example.com</a></li>
+                <li><i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><i class="bi bi-github"></i> <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Optional: simple email form (no backend; opens email client) -->
+        <div class="col-lg-6">
+          <div class="card card-glass h-100">
+            <div class="card-body p-4">
+              <h3 class="mb-3">Message</h3>
+
+              <form id="mailForm">
+                <div class="mb-3">
+                  <label class="form-label">Your Name</label>
+                  <input id="mName" class="form-control form-control-soft" type="text" placeholder="Enter your name" required>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Your Email</label>
+                  <input id="mEmail" class="form-control form-control-soft" type="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Message</label>
+                  <textarea id="mMsg" class="form-control form-control-soft" rows="5" placeholder="Type your message" required></textarea>
+                </div>
+
+                <button class="btn btn-accent" type="submit">Send</button>
+                <p class="text-soft small mt-2 mb-0">This triggers your email app; no backend required.</p>
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-4 footer">
+    <div class="container text-center">
+      <div class="text-soft">
+        © Copyright <span id="year"></span> Your Name. All Rights Reserved
+      </div>
+      <div class="text-soft small mt-1">Designed by Your Name</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
