@@ -66,8 +66,8 @@
   if (canvas && canvas.getContext) {
     var ctx = canvas.getContext('2d');
     var W, H, particles = [];
-    var PARTICLE_COUNT = 110;
-    var CONNECTION_DIST = 90;
+    var PARTICLE_COUNT = 80;
+    var CONNECTION_DIST = 80;
 
     function resize() {
       W = canvas.width  = window.innerWidth;
@@ -82,13 +82,13 @@
       this.reset = function () {
         this.x     = randBetween(0, W);
         this.y     = randBetween(0, H);
-        this.vx    = randBetween(-0.35, 0.35);
-        this.vy    = randBetween(-0.35, 0.35);
-        this.r     = randBetween(0.4, 1.6);
-        this.alpha = randBetween(0.1, 0.5);
-        this.life  = randBetween(120, 280);
-        this.maxL  = this.life;
-        this.cyan  = Math.random() > 0.45; // true = cyan, false = magenta
+        this.vx      = randBetween(-0.28, 0.28);
+        this.vy      = randBetween(-0.28, 0.28);
+        this.r       = randBetween(0.3, 1.2);
+        this.alpha   = randBetween(0.08, 0.38);
+        this.life    = randBetween(150, 320);
+        this.maxL    = this.life;
+        this.emerald = Math.random() > 0.35; // true = emerald, false = copper
       };
       this.reset();
     }
@@ -111,7 +111,7 @@
             ctx.beginPath();
             ctx.moveTo(particles[a].x, particles[a].y);
             ctx.lineTo(particles[b].x, particles[b].y);
-            ctx.strokeStyle = 'rgba(0,255,255,' + alpha + ')';
+            ctx.strokeStyle = 'rgba(16,185,129,' + alpha + ')';
             ctx.lineWidth   = 0.5;
             ctx.stroke();
           }
@@ -132,7 +132,7 @@
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        var color = p.cyan ? '0,255,255' : '255,0,255';
+        var color = p.emerald ? '16,185,129' : '217,119,6';
         ctx.fillStyle = 'rgba(' + color + ',' + (p.alpha * fade) + ')';
         ctx.fill();
       }
@@ -200,13 +200,13 @@
         var cy   = rect.top  + rect.height / 2;
         var dx   = (e.clientX - cx) / (rect.width  / 2);
         var dy   = (e.clientY - cy) / (rect.height / 2);
-        var rx   = -dy * 10;
-        var ry   =  dx * 10;
-        card.style.transform  = 'perspective(900px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) scale3d(1.015,1.015,1.015)';
+        var rx   = -dy * 6;
+        var ry   =  dx * 6;
+        card.style.transform  = 'perspective(1000px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) scale3d(1.01,1.01,1.01)';
         card.style.boxShadow  =
-          (-dx * 8) + 'px ' + (-dy * 8) + 'px 30px rgba(0,255,255,0.18),' +
-          ( dx * 8) + 'px ' + ( dy * 8) + 'px 30px rgba(255,0,255,0.10)';
-        card.style.borderColor = 'rgba(0,255,255,' + (0.18 + Math.abs(dx) * 0.25) + ')';
+          (-dx * 6) + 'px ' + (-dy * 6) + 'px 30px rgba(16,185,129,0.12),' +
+          ( dx * 6) + 'px ' + ( dy * 6) + 'px 20px rgba(217,119,6,0.07)';
+        card.style.borderColor = 'rgba(16,185,129,' + (0.22 + Math.abs(dx) * 0.2) + ')';
       });
       card.addEventListener('mouseleave', function () {
         card.style.transition  = 'transform .5s ease, box-shadow .5s ease, border-color .5s ease';
